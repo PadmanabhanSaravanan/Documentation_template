@@ -78,9 +78,7 @@ LiaScript.
 * [**Images**](#images)
 * [**Tables**](#tables)
 * [**Code**](#code)
-* [**Math**](#math)
-* [**Macros**](#macros)
-* [**Comments**](#comments)
+* [**Blockquotes**](#blockquotes)
 
 ### **Basic Definition on top of the document**
 
@@ -493,3 +491,32 @@ for i in range(10):
 ```
 
 ---
+
+### **Blockquotes**
+
+**Markdown-Syntax:**
+
+<!-- class="translate"-->
+``` md
+> This was said some time ago ...
+>
+>> This was said even longer ago,
+> > I guess ...
+>
+> * aleph
+> * beth
+```
+
+As you can see from the example, all Markdown elements can be used within a
+blockquote and vice versa. Everything you have learned so far can be easily
+combined, it could also be a gallery or an embedded object...
+
+**Result:**
+
+> This was said some time ago ...
+>
+>> This was said even longer ago,
+> > I guess ...
+>
+> * aleph
+> * beth

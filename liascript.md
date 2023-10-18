@@ -70,6 +70,17 @@ LiaScript.
 ## **Markdown Syntax**
 
 * [**Basic Definition on top of the document**](#basic-definition-on-top-of-the-document)
+* [**Headings**](#headings)
+* [**Text**](#text)
+* [**Escape Characters**](#escape-characters)
+* [**Lists**](#lists)
+* [**Links**](#links)
+* [**Images**](#images)
+* [**Tables**](#tables)
+* [**Code**](#code)
+* [**Math**](#math)
+* [**Macros**](#macros)
+* [**Comments**](#comments)
 
 ### **Basic Definition on top of the document**
 
@@ -117,6 +128,12 @@ link:     https://some_css_stuff
 ### **Headings**
 
 ---
+
+Syntax for headings:
+
+``` markdown    
+#
+```
 
 Headings are defined by a single `#` at the beginning of a line. The number of `#` defines the level of the heading. The following example shows the usage of headings.
 
@@ -171,6 +188,11 @@ have to use it, if there is only one asterisk within a line, this will be
 interpreted as a single character. So you will have to apply this kind of
 escaping only to prevent misunderstandings between you and the interpreter.
 
+**Markdown-Syntax:**
+
+```md
+\
+```
 
 ``` markdown
 \*, \~, \_, \#, \{, \}, \[, \], \|, \`, \$, \@, \\, \<, \>
@@ -181,6 +203,12 @@ escaping only to prevent misunderstandings between you and the interpreter.
 ### **Lists**
 
 ---
+
+syntax for lists:
+
+``` markdown
+* , - , +
+```
 
                           --{{0}}--
 The GitHub-flavored Markdown supports two types of lists, ordered and unordered
@@ -308,6 +336,15 @@ double quotes at the end of the URL. This optional information is used as a
 title attribute, and it is shown, when the user hovers the link with the mouse.
 
 
+syntax for links:
+
+``` markdown
+http://goo.gl/fGXNvu
+*** http://goo.gl/fGXNvu ***
+[title](http://goo.gl/fGXNvu "optional info")
+[next slide](#18)
+```
+
 1. Example of an URL-link -> http://goo.gl/fGXNvu
 
    text-formatting can be applied also `*** http://goo.gl/fGXNvu ***` ->
@@ -327,12 +364,86 @@ title attribute, and it is shown, when the user hovers the link with the mouse.
 
 ---
 
+**Image-notation:**
+
+``` markdown
+![alt-text](url) 
+![alt-text](url "optional title")
+```
+
+* relative URL: `![Beautiful Lenna](img/lenna.jpg)`
+
+  ![Beautiful Lenna](img/lenna.jpg)
+
+* absolute URL: `![Annunciation of ...](https://upload.wiki...jpg)`
+
+  ![Annunciation of the brith of Christ](https://upload.wikimedia.org/wikipedia/commons/5/51/Leonardo_da_Vinci_Annunciation.jpg "**Annunciation c. 1472–1476**: is thought to be Leonardo's earliest complete work")
+
+---
+
+**Galleries**
+
+
+                          --{{0}}--
+How would you interpret a paragraph full of images? We thought that the only
+reasonable depiction of this could be a gallery.
+
+``` markdown
+![img1](url) ![img2](url) ![img3](url)
+![img4](url)
+![img5](url)
+```
+
+And we like this idea... You can click on every image and inspect it also with
+the zooming feature.
+
+![Portrait of a lady](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Leonardo_da_Vinci_%28attrib%29-_la_Belle_Ferroniere.jpg/723px-Leonardo_da_Vinci_%28attrib%29-_la_Belle_Ferroniere.jpg "La Belle Ferronnière, c. 1490–1498")
+![Lady with an Ermine](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/761px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg "Lady with an Ermine, c. 1489–1491, Czartoryski Museum, Kraków, Poland")
+![Mona Lisa](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg "Mona Lisa or La Gioconda c. 1503–1516, Louvre, Paris")
+![Virgin and Child ](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Leonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg/764px-Leonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg "The Virgin and Child with Saint Anne, c. 1501–1519, Louvre, Paris")
+![The Death of Leonardo da Vinci](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Francois_Ier_Leonard_de_Vinci-Jean_Auguste_Dominique_Ingres.jpg/1276px-Francois_Ier_Leonard_de_Vinci-Jean_Auguste_Dominique_Ingres.jpg "The Death of Leonardo da Vinci, by Ingres, 1818")
+
 ---
 
 ### **Tables**
 
 ---
+Tables, _as we hope_, are easy to interpret and to create. Simply use horizontal
+rules to separate cells. The header is always defined by the first line, while
+the second line is used to separate the table header from the body visually and
+to define the column alignment.
 
+**Markdown-format:**
+
+<!-- class="translate"-->
+``` markdown
+| Tables               |      Are      |  Cool |
+| -------------------- |:-------------:| -----:|
+| *** columns 3 is *** | right-aligned | $1600 |
+| ** column 2 is **    |   centered    |   $12 |
+| * zebra stripes *    |   are neat    |    $1 |
+```
+
+As you can see in the result, you can sort tables, by clicking onto the icon
+that appears on the right of every header cell. A table will then be either
+sorted ascending, descending, or not sorted, which means your initial row order
+will be restored.
+
+**Result:**
+
+| Tables               |      Are      |  Cool |
+| -------------------- |:-------------:| -----:|
+| *** columns 3 is *** | right-aligned | $1600 |
+| ** column 2 is **    |   centered    |   $12 |
+| * zebra stripes *    |   are neat    |    $1 |
+
+The position of the colon defines whether a column should be centered, aligned
+to the left or to the right. By default, if you do not use colons, all columns
+are aligned to the left.
+
+* centered --> `:---:`
+* right --> `---:`
+* left --> `:---` or `---` (default)
 
 ---
 
@@ -340,22 +451,45 @@ title attribute, and it is shown, when the user hovers the link with the mouse.
 
 ---
 
----
+In Markdown, you can use a sequence of at least three subsequent backticks `\``
+to indicate a code-block that should not be treated as Markdown, but instead
+contains some kind of code for which syntax-highlighting should be used, if
+possible. The first word after the backticks is used as an indicator, for which
+kind of syntax-highlighting should be applied.
 
-### **Math**
+**syntax for code:**
 
----
+```` markdown
+```python
 
----
+```
+````
 
-### **Macros**
+````md
+```python
+import time
+# Quick, count to ten!
+for i in range(10):
+    # (but not *too* quick)
+    time.sleep(0.5)
+    print(i)
+```
+````
 
----
+In case you are wondering, how to embed a code-block into a code-block with
+backticks? Three backticks are the minimum, thus you can surround your Markdown
+code-block example with a sequence of 4 or more backticks. If you start with
+four backticks, LiaScript will parse everything as code until it reaches a
+matching number of backticks.
 
----
 
-### **Comments**
-
----
+```python
+import time
+# Quick, count to ten!
+for i in range(10):
+  # (but not *too* quick)
+  time.sleep(0.5)
+  print(i)
+```
 
 ---

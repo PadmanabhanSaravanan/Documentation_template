@@ -56,7 +56,23 @@ Here you can start with the actual content of the module/topic. Describe what th
 
 <!-- Dive deeper into the topic -->
 
-Describe the content of the section here and include any images, code snippets, etc. that you want to include.you can also include a note or a tip here.
+Remember to use bulleted points for clarity, and supplement explanations with images and GIFs to enhance understanding. 
+
+- **Main Point 1**: Description or explanation.
+
+  - ![Image Description](link_to_image.jpg) <!-- Inserting an image -->
+  - ![GIF Description](link_to_gif.gif) <!-- Inserting a GIF -->
+
+- **Main Point 2**: Description or explanation.
+
+  ... and so on ...
+
+You can also include code snippets like this:
+
+```python
+# This is a code snippet
+print("Hello World!")
+```
 
 > **Note:** This is a note.
 

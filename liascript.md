@@ -520,3 +520,28 @@ combined, it could also be a gallery or an embedded object...
 >
 > * aleph
 > * beth
+
+### Horizontal rules
+
+**Markdown-Syntax:**
+
+``` markdown
+some paragraph
+
+---
+
+something else
+
+----------------
+```
+
+**Result:**
+
+some paragraph
+
+---
+
+something else
+
+----------------
+

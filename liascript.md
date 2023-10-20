@@ -546,7 +546,7 @@ combined, it could also be a gallery or an embedded object...
 > * aleph
 > * beth
 
-### Horizontal rules
+### **Horizontal rules**
 
 **Markdown-Syntax:**
 
